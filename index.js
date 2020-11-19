@@ -2,7 +2,8 @@ let express = require('express');
 const ChromeLauncher = require('chrome-launcher');
 let app = express();
 let router = require('./router/main')(app);
-let port = 3000;
+
+let port = process.env.PORT || 3000;
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
